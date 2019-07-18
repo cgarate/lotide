@@ -1,2 +1,2 @@
 # lotide
-An library exercise within the LHL Bootcamp program
+A library exercise within the LHL Bootcamp program
