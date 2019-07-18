@@ -7,3 +7,5 @@ assertEqual("Carlos", "Karla");
 assertEqual(1, 1);
 assertEqual("Carlos", "Carlos");
 assertEqual(10, 11);
+
+module.exports = assertEqual;
