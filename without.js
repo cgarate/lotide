@@ -1,12 +1,9 @@
-const eqArrays = require("./eqArrays");
-
 const without = (source, toRemove) => {
   return source.reduce((accum, currentSourceItem) => {
     return !toRemove.includes(currentSourceItem)
-    ? [...accum, currentSourceItem]
-    : [...accum]
-  }, [])
-}
+      ? [...accum, currentSourceItem]
+      : [...accum];
+  }, []);
+};
 
 module.exports = without;
-
