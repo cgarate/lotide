@@ -1,5 +1,3 @@
-assertEqual = require("./assertEqual");
-
 const eqArrays = (arrayOne, arrayTwo) => {
   const isArray = Array.isArray;
   if (isArray(arrayOne) && isArray(arrayTwo)) {
@@ -19,9 +17,4 @@ const eqArrays = (arrayOne, arrayTwo) => {
   }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], []), false);
-assertEqual(eqArrays([1, 2, 3], [1, 2, 4]), false);
-assertEqual(eqArrays([], []), true);
-assertEqual(eqArrays({}, "hola"), false);
-assertEqual(eqArrays([1], [2, 3]), false);
+module.exports = eqArrays;
