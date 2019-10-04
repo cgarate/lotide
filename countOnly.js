@@ -3,16 +3,13 @@
  * It will return an object containing counts of everything that the input object listed.
  */
 
-const countOnly = (allItems, itemsToCount) => {
-  const result = allItems.reduce((result, currentItem) => {
+const countOnly = (allItems, itemsToCount) =>
+  (result = allItems.reduce((result, currentItem) => {
     return itemsToCount && itemsToCount[currentItem]
       ? result[currentItem]
         ? { ...result, [currentItem]: result[currentItem] + 1 }
         : { ...result, [currentItem]: 1 }
       : { ...result };
-  }, {});
-
-  return result;
-};
+  }, {}));
 
 module.exports = countOnly;
