@@ -4,12 +4,15 @@
  */
 
 const countOnly = (allItems, itemsToCount) =>
-  (result = allItems.reduce((result, currentItem) => {
+  (result = allItems.reduce((countResultObject, currentItem) => {
     return itemsToCount && itemsToCount[currentItem]
-      ? result[currentItem]
-        ? { ...result, [currentItem]: result[currentItem] + 1 }
-        : { ...result, [currentItem]: 1 }
-      : { ...result };
+      ? countResultObject[currentItem]
+        ? {
+            ...countResultObject,
+            [currentItem]: countResultObject[currentItem] + 1,
+          }
+        : { ...countResultObject, [currentItem]: 1 }
+      : { ...countResultObject };
   }, {}));
 
 module.exports = countOnly;
