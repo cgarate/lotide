@@ -1,7 +1,6 @@
 const countLetters = (theString) =>
   theString
     .toLowerCase()
-    .replace(/ /g, "")
     .replace(/[^A-Za-z0-9]/g, "")
     .split("")
     .reduce((results, currentLetter) => {
